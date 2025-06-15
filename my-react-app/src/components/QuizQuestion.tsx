@@ -4,7 +4,7 @@ interface question {
   isCorrect: boolean;
 }
 
-interface electricalQuizProps {
+interface quizProps {
   question: string;
   answers: question[];
   currentQuestion: number;
@@ -12,7 +12,7 @@ interface electricalQuizProps {
   onAnswer: (isCorrect: boolean) => void;
 }
 
-const ElectricalQuiz = ({ question, answers, currentQuestion, totalQuestions, onAnswer }: electricalQuizProps) => {
+const QuizQuestion = ({ question, answers, currentQuestion, totalQuestions, onAnswer }: quizProps) => {
   return (
     <div>
       <h2>
@@ -31,4 +31,4 @@ const ElectricalQuiz = ({ question, answers, currentQuestion, totalQuestions, on
   );
 };
 
-export default ElectricalQuiz;
+export default QuizQuestion;

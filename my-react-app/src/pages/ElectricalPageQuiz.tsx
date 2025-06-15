@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ElectricalQuiz from "../components/ElectricalQuiz";
+import ElectricalQuiz from "../components/QuizQuestion";
 import questionsElectrical from "../dataQuiz/dataQuizElectrical";
 
 const ElectricalPageQuiz = () => {
