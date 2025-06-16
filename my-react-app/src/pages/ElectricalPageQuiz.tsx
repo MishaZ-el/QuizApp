@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ElectricalQuiz from "../components/QuizQuestion";
+import QuizQuestion from "../components/QuizQuestion";
 import questionsElectrical from "../dataQuiz/dataQuizElectrical";
 
 const ElectricalPageQuiz = () => {
@@ -30,16 +30,16 @@ const ElectricalPageQuiz = () => {
   if (showResults) {
     quizContent = (
       <div>
-        <h1>Итоговый результат</h1>
-        <h2>
+        <h2>Итоговый результат</h2>
+        <h3>
           {score} баллов набрано из {questionsElectrical.length} - ({Math.round((score / questionsElectrical.length) * 100)}%)
-        </h2>
+        </h3>
         <button onClick={restartQuiz}>Начать заново</button>
       </div>
     );
   } else {
     quizContent = (
-      <ElectricalQuiz
+      <QuizQuestion
         question={questionsElectrical[currentQuestion].text}
         answers={questionsElectrical[currentQuestion].answers}
         currentQuestion={currentQuestion}
@@ -51,8 +51,8 @@ const ElectricalPageQuiz = () => {
 
   return (
     <div>
-      <h1>Викторина по электротехнике</h1>
-      <h2>Всего баллов: {score}</h2>
+      <h2>Викторина по электротехнике</h2>
+      <h3>Всего баллов: {score}</h3>
       {quizContent}
     </div>
   );

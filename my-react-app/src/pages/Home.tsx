@@ -22,18 +22,18 @@ const HomePage = () => {
             <p>Викторина по электротехнике</p>
           </div>
         </Link>
-        <div>
-          <a href="/quizGeographyPage" target="_blank">
-            <img src={geography} alt="Электротехника" />
+        <Link to="/geographyQuiz">
+          <div>
+            <img src={geography} alt="География" />
             <p>Викторина по географии</p>
-          </a>
-        </div>
-        <div>
-          <a href="/quizAstronomyPage" target="_blank">
-            <img src={astronomy} alt="Электротехника" />
+          </div>
+        </Link>
+        <Link to="/astronomyQuiz">
+          <div>
+            <img src={astronomy} alt="Астрономия" />
             <p>Викторина по астрономии</p>
-          </a>
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
