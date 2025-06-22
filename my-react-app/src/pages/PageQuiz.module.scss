@@ -1,0 +1,91 @@
+.pageQuizContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  background: linear-gradient(135deg, #a832b1, #4c1c94);
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.headerBlock {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pageQuizHeader {
+  color: #ffe158;
+  margin: 0;
+}
+
+.quizMain {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+.quizContainer,
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.modal {
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.correct {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.incorrect {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.quizButton {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff9d00, #ff5975);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.quizButton:hover {
+  transform: scale(1.05);
+}
+
+.buttonPosition {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20pz;
+}
+
+.scoreText {
+  margin-top: 10px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}

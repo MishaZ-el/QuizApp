@@ -1,0 +1,25 @@
+header {
+  width: 1500px;
+  text-align: center;
+}
+
+main {
+  width: 1700px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 500px);
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo {
+  width: 1700px;
+  height: 900px;
+  border-radius: 50px;
+}
+
+.cardImage {
+  width: 500px;
+  height: 500px;
+}

@@ -1,41 +1,36 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.jpg";
-import electrical from "../assets/electrical.jpeg";
-import astronomy from "../assets/astronomy.jpeg";
-import geography from "../assets/geography.jpeg";
+import Logo from "../assets/Logo.png";
+import electrical from "../assets/electrical.png";
+import astronomy from "../assets/astronomy.png";
+import geography from "../assets/geography.png";
+import style from "../pages/Home.module.scss";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <header>
+        <img className={style.Logo} src={Logo} alt="Logo" />
         <h1>
           Увлекательная наука в формате викторин! Проверьте свои знания и откройте для себя новые горизонты в мире науки с нашими интерактивными викторинами. От астрономии до электротехники — каждый
           найдет что-то интересное для себя.
         </h1>
-        <img src={Logo} alt="Logo" />
       </header>
 
-      <div>
-        <Link to="/electricalQuiz">
-          <div>
-            <img src={electrical} alt="Электротехника" />
-            <p>Викторина по электротехнике</p>
-          </div>
+      <main>
+        <Link to="/electricalQuiz" className={style.card}>
+          <img className={style.cardImage} src={electrical} alt="Электротехника" />
+          <p>Викторина по электротехнике</p>
         </Link>
         <Link to="/geographyQuiz">
-          <div>
-            <img src={geography} alt="География" />
-            <p>Викторина по географии</p>
-          </div>
+          <img className={style.cardImage} src={geography} alt="География" />
+          <p>Викторина по географии</p>
         </Link>
         <Link to="/astronomyQuiz">
-          <div>
-            <img src={astronomy} alt="Астрономия" />
-            <p>Викторина по астрономии</p>
-          </div>
+          <img className={style.cardImage} src={astronomy} alt="Астрономия" />
+          <p>Викторина по астрономии</p>
         </Link>
-      </div>
-    </div>
+      </main>
+    </>
   );
 };
 
