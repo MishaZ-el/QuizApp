@@ -12,7 +12,13 @@ interface quizProps {
   onAnswer: (isCorrect: boolean) => void;
 }
 
-const QuizQuestion = ({ question, answers, currentQuestion, totalQuestions, onAnswer }: quizProps) => {
+const QuizQuestion = ({
+  question,
+  answers,
+  currentQuestion,
+  totalQuestions,
+  onAnswer,
+}: quizProps) => {
   return (
     <div>
       <h2>
