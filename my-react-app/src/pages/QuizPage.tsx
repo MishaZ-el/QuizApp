@@ -14,7 +14,7 @@ interface QuizData {
 
 const QuizPage = () => {
   const location = useLocation();
-  const { quizData } = location.state as {
+  const { quizData, quizTitle } = location.state as {
     quizData: QuizData[];
     quizTitle: string;
   };
@@ -94,7 +94,7 @@ const QuizPage = () => {
   return (
     <div className={styles.pageQuizContainer}>
       <div className={styles.header}>
-        <h2 className={styles.pageQuizHeader}>Викторина по астрономии</h2>
+        <h2 className={styles.pageQuizHeader}>{quizTitle}</h2>
       </div>
       <main className={styles.quizMain}>
         {quizContent}

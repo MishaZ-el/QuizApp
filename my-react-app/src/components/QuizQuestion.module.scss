@@ -1,0 +1,25 @@
+@use "../styles/variable.module.scss" as vars;
+
+.questionText {
+  font-family: vars.$font-primary;
+  font-size: 36px;
+  color: vars.$color-primary;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.answerOption {
+  background: rgba(vars.$color-violet, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 15px 0;
+  font-family: vars.$font-primary;
+  font-size: 28px;
+  color: vars.$color-primary;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(vars.$color-violet, 0.2);
+  }
+}

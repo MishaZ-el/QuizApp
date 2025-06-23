@@ -1,3 +1,5 @@
+import styles from "../components/QuizQuestion.module.scss";
+
 interface question {
   id: number;
   option: string;
@@ -21,14 +23,18 @@ const QuizQuestion = ({
 }: quizProps) => {
   return (
     <div>
-      <h2>
+      <h2 className={styles.questionText}>
         Вопрос номер: {currentQuestion + 1} из {totalQuestions}
       </h2>
       <h3>{question}</h3>
 
       <ul>
         {answers.map((answer) => (
-          <li key={answer.id} onClick={() => onAnswer(answer.isCorrect)}>
+          <li
+            key={answer.id}
+            className={styles.answerOption}
+            onClick={() => onAnswer(answer.isCorrect)}
+          >
             {answer.option}
           </li>
         ))}
