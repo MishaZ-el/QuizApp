@@ -93,7 +93,7 @@ const QuizPage = () => {
 
   return (
     <div className={styles.pageQuizContainer}>
-      <div className={styles.headerBlock}>
+      <div className={styles.header}>
         <h2 className={styles.pageQuizHeader}>Викторина по астрономии</h2>
       </div>
       <main className={styles.quizMain}>

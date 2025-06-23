@@ -1,21 +1,24 @@
-@import "../styles/variable.module.scss";
+@use "../styles/variable.module.scss" as vars;
 
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 header {
   text-align: center;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
 h1 {
-  font-family: $font-primary;
-  font-size: 1.5rem;
-  color: $color-dark;
-  line-height: 1.6;
-  max-width: 800px;
+  font-family: vars.$font-primary;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 50px;
+  color: vars.$color-primary;
+  line-height: 1.2;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -41,32 +44,34 @@ main {
 }
 
 .card {
-  background: white;
-  border-radius: 15px;
+  background: none;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: vars.$box-shadow;
   transition: all 0.3s ease;
   text-decoration: none;
-  color: $color-dark;
+  color: vars.$color-primary;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: vars.$box-shadow;
   }
 
   .cardImage {
     width: 500px;
     height: 500px;
     object-fit: cover;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: vars.$box-shadow;
   }
 
   p {
-    font-family: $font-primary;
-    font-size: 1.2rem;
+    font-family: vars.$font-primary;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    color: vars.$color-primary;
     text-align: center;
-    padding: 1.5rem;
-    margin: 0;
-    background: $color-light;
+    padding: 20px;
+    background: vars.$color-violet;
   }
 }
