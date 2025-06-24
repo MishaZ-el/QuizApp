@@ -48,48 +48,42 @@ const QuizPage = () => {
     setShowResults(false);
   };
 
-  let quizContent;
-
-  if (showResults) {
-    quizContent = (
-      <div className={styles.resultsContainer}>
-        <h2>Итоговый результат</h2>
-        <h3>
-          {score} баллов набрано из {quizData.length} - (
-          {Math.round((score / quizData.length) * 100)}%)
-        </h3>
-        <div className={styles.buttonPosition}>
-          <button className={styles.quizButton} onClick={restartQuiz}>
-            Начать заново
-          </button>
-          <Link to="/">
-            <button className={styles.quizButton}>На главную</button>
-          </Link>
+  const quizContent = showResults ? (
+    <div className={styles.resultsContainer}>
+      <h2>Итоговый результат</h2>
+      <h3>
+        {score} баллов набрано из {quizData.length} - (
+        {Math.round((score / quizData.length) * 100)}%)
+      </h3>
+      <div className={styles.buttonPosition}>
+        <button className={styles.quizButton} onClick={restartQuiz}>
+          Начать заново
+        </button>
+        <Link to="/">
+          <button className={styles.quizButton}>На главную</button>
+        </Link>
+      </div>
+    </div>
+  ) : (
+    <div className={styles.quizContainer}>
+      <QuizQuestion
+        question={quizData[currentQuestion].text}
+        answers={quizData[currentQuestion].answers}
+        currentQuestion={currentQuestion}
+        totalQuestions={quizData.length}
+        onAnswer={handleClick}
+      />
+      {showModal && (
+        <div
+          className={`${styles.modal} ${
+            showModal === "Верно!" ? styles.correct : styles.incorrect
+          }`}
+        >
+          {showModal}
         </div>
-      </div>
-    );
-  } else {
-    quizContent = (
-      <div className={styles.quizContainer}>
-        <QuizQuestion
-          question={quizData[currentQuestion].text}
-          answers={quizData[currentQuestion].answers}
-          currentQuestion={currentQuestion}
-          totalQuestions={quizData.length}
-          onAnswer={handleClick}
-        />
-        {showModal && (
-          <div
-            className={`${styles.modal} ${
-              showModal === "Верно!" ? styles.correct : styles.incorrect
-            }`}
-          >
-            {showModal}
-          </div>
-        )}
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 
   return (
     <div className={styles.pageQuizContainer}>
