@@ -1,7 +1,7 @@
 @use "../styles/variable.module.scss" as vars;
 
 .pageQuizContainer {
-  max-width: 1600px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   min-height: 100vh;
@@ -10,8 +10,8 @@
 .header {
   width: 100%;
   background: white;
-  border-radius: 50px;
-  padding: 60px;
+  border-radius: 40px;
+  padding: 40px 60px;
   margin-bottom: 50px;
   box-shadow: vars.$box-shadow;
   transition: all 0.3s ease;
@@ -25,20 +25,21 @@
   font-family: vars.$font-primary;
   font-weight: 400;
   font-style: italic;
-  font-size: 40px;
+  font-size: 30px;
   color: vars.$color-primary;
   text-align: center;
 }
 
 .quizMain {
   width: 100%;
-  height: 700px;
+  max-width: 1000px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: white;
-  border-radius: 50px;
+  border-radius: 40px;
   box-shadow: vars.$box-shadow;
   padding: 60px;
 }
@@ -46,32 +47,32 @@
 .quizContainer,
 .resultsContainer {
   font-family: vars.$font-primary;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 400;
   color: vars.$color-primary;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 1.4;
 }
 
 .quizContainer h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
 .questionText {
   text-align: center;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .answerOption {
   width: 100%;
-  padding: 25px;
-  margin: 15px 0;
+  padding: 20px;
+  margin: 12px 0;
   background: rgba(vars.$color-violet, 0.1);
   border-radius: 20px;
   font-family: vars.$font-primary;
-  font-size: 28px;
+  font-size: 24px;
   color: vars.$color-primary;
   cursor: pointer;
   border: none;
@@ -88,7 +89,7 @@
   padding: 20px 40px;
   border-radius: 30px;
   font-family: vars.$font-primary;
-  font-size: 28px;
+  font-size: 24px;
   color: white;
   opacity: 0;
   transform: scale(0.9);
@@ -112,13 +113,13 @@
 
 .quizButton {
   margin: 10px;
-  padding: 20px 40px;
+  padding: 15px 30px;
   border: none;
   border-radius: 50px;
   background: vars.$color-primary;
   color: white;
   font-family: vars.$font-primary;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   box-shadow: vars.$box-shadow;
   transition: transform 0.2s ease;
@@ -140,14 +141,14 @@
 
   h2 {
     font-family: vars.$font-primary;
-    font-size: 40px;
+    font-size: 36px;
     color: vars.$color-primary;
     margin-bottom: 30px;
   }
 
   h3 {
     font-family: vars.$font-primary;
-    font-size: 32px;
+    font-size: 28px;
     color: vars.$color-primary;
     margin-bottom: 40px;
   }
@@ -155,7 +156,7 @@
 
 .scoreText {
   font-family: vars.$font-primary;
-  font-size: 28px;
+  font-size: 24px;
   color: vars.$color-primary;
-  margin-top: 40px;
+  margin-top: 20px;
 }

@@ -1,51 +1,51 @@
 @use "../styles/variable.module.scss" as vars;
 
 .container {
-  max-width: 1600px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 header {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h1 {
   font-family: vars.$font-primary;
   font-weight: 400;
   font-style: italic;
-  font-size: 50px;
+  font-size: 30px;
   color: vars.$color-primary;
-  line-height: 1.2;
-  max-width: 1600px;
+  line-height: 1.1;
   margin: 0 auto;
 }
 
 .Logo {
-  width: 1600px;
-  margin-bottom: 30px;
-  border-radius: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  border-radius: 30px;
 }
 
 main {
-  width: 1600px;
-  height: 600px;
+  width: 100%;
+  max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(3, 500px);
+  grid-template-columns: repeat(3, 300px);
   gap: 50px;
   justify-content: center;
   align-items: center;
 }
 
 .cardImage {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
 }
 
 .card {
   background: none;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: vars.$box-shadow;
   transition: all 0.3s ease;
@@ -58,8 +58,8 @@ main {
   }
 
   .cardImage {
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-bottom: vars.$box-shadow;
   }
@@ -68,10 +68,10 @@ main {
     font-family: vars.$font-primary;
     font-weight: 400;
     font-style: italic;
-    font-size: 30px;
+    font-size: 18px;
     color: vars.$color-primary;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background: vars.$color-violet;
   }
 }
